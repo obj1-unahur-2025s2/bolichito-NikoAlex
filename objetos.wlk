@@ -89,7 +89,7 @@ object placa {
   var peso = 10
   var color = rojo
   
-  method material() = vidrio
+  method material() = cobre
 
   method peso() = peso
   method color() = color
@@ -100,19 +100,48 @@ object placa {
 
   method cambiarColor(colorNuevo){
     color = colorNuevo
+  } 
+}
+
+object arito {
+  method color() = celeste
+  method material() = cobre
+  method peso() = 180
+}
+
+object naranja {
+  method esFuerte() {
+    return true
   }
+}
+
+object banquito {
+  var color = naranja
+
+  method material() = madera
+  method peso() = 1700
+  method color() = color
+
+  method cambiarColor(colorNuevo) {
+   color = colorNuevo
+  }
+
+}
+
+
+object cajita {
+  var objeto = pelota
+
+  method material() = cobre
+  method color() = rojo 
+
+  method peso() = 400 + objeto.peso()
+
+  method cambiarObjetoA(unObjeto) {
+    objeto = unObjeto
+  } 
 }
 
 
 
-
-
-/*
-Finalmente, considerar (al menos) estos objetos:
-  - una _remera_ roja de lino, pesa 800 gramos.
-  - una _pelota_ parda de cuero, pesa 1300 gramos.
-  - una _biblioteca_ verde de madera, pesa 8000 gramos.
-  - un _muñeco_ celeste de vidrio, de peso variable.
-  - una _placa_ de cobre, de peso y color variables.
-*/
 
